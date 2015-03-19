@@ -33,7 +33,7 @@ before_script:
     - cp test/db.config.ci test/db.config.json
     - sudo service mongodb status
 
-after_failure:
+after_script:
     - sudo dmesg
     - dmesg
     - sudo service mongodb status
